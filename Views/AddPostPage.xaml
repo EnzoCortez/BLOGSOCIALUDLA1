@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BLOGSOCIALUDLA.Views.AddPostPage"
+             Title="Añadir Post">
+
+    <ScrollView>
+        <Grid BackgroundColor="white">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <!--Proyecto terminado-->
+            <StackLayout Margin="10,20,10,0" HorizontalOptions="Center">
+                <Label FontAttributes="Bold"
+                       WidthRequest="233"
+                       HeightRequest="40"
+                       FontFamily="PoppinsBold"
+                       FontSize="30"
+                       Text="Nuevo Post"
+                       HorizontalOptions="StartAndExpand"
+                       TextColor="DarkRed"
+                       Margin="35,0,0,20"/>
+
+                <Entry x:Name="TituloPost"
+                       FontFamily="PoppinsMedium"
+                       Placeholder="Título del Post"
+                       FontSize="15"
+                       Margin="0,0,0,10" />
+                <Editor x:Name="ContenidoPost"
+                        FontFamily="PoppinsMedium"
+                        Placeholder="Contenido del Post"
+                        FontSize="15"
+                        HeightRequest="200"
+                        Margin="0,0,0,20" />
+
+                <Button BackgroundColor="#8D2232"
+                        WidthRequest="250"
+                        HeightRequest="50"
+                        FontFamily="PoppinsSemiBold"
+                        FontSize="Header"
+                        Text="Añadir Post"
+                        TextColor="White"
+                        Margin="0,0,0,80"
+                        Clicked="ClickAñadirPost" />
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

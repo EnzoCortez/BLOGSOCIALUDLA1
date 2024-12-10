@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="BLOGSOCIALUDLA.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:BLOGSOCIALUDLA"
+    xmlns:views="clr-namespace:BLOGSOCIALUDLA.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="BLOGSOCIALUDLA">
+
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:LoginView}"
+        Route="MainPage" 
+        
+        
+        />
+    <ShellContent
+    Title="Galeria"
+    ContentTemplate="{DataTemplate views:GaleriaServicios}"
+    Route="MainPage" 
+    
+    
+    />-->
+    <ShellItem Route="MainPage">
+        <ShellSection Title="Home">
+            <ShellContent ContentTemplate="{DataTemplate views:LoginView}" />
+        </ShellSection>
+    </ShellItem>
+
+    <ShellItem Route="GaleriaServicios">
+        <ShellSection Title="Galeria">
+            <ShellContent ContentTemplate="{DataTemplate views:GaleriaServicios}" />
+        </ShellSection>
+    </ShellItem>
+    
+    <ShellItem Route="PaginaPrincipal">
+        <ShellSection Title="Página Principal">
+            <ShellContent ContentTemplate="{DataTemplate views:PaginaPrincipal}" />
+        </ShellSection>
+    </ShellItem>
+    
+    <ShellItem Route="PostNodo">
+        <ShellSection Title="Nodo">
+            <ShellContent ContentTemplate="{DataTemplate views:PostNodo}" />
+        </ShellSection>
+    </ShellItem>
+    <ShellItem Route="PostFica">
+        <ShellSection Title="Fica">
+            <ShellContent ContentTemplate="{DataTemplate views:PostFica}" />
+        </ShellSection>
+    </ShellItem>
+
+
+</Shell>

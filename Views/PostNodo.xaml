@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BLOGSOCIALUDLA.Views.PostNodo"
+             Title="PostNodo">
+    <ScrollView>
+        <Grid BackgroundColor="white">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="1" BackgroundColor="White">
+                <VerticalStackLayout Margin="10,20,10,0" HorizontalOptions="Center">
+
+                    <Label FontAttributes="Bold"
+                   WidthRequest="233"
+                   HeightRequest="35"
+                   FontFamily="PoppinsBold"
+                   FontSize="30"
+                   Text="NODO"
+                   HorizontalOptions="StartAndExpand"
+                   TextColor="DarkRed"
+                   Margin="35,0,0,20"/>
+
+
+                    <Label TextColor="#636363"
+                       FontFamily="Poppins-Medium" 
+                       Margin="35,0,25,20" 
+                       FontSize="13.5"
+                       Text="En NODO, agrupamos todas las carreras que abrazan un enfoque creativo en su proyección profesional."/>
+
+                    <Label FontAttributes="Bold"
+                            WidthRequest="233"
+                            HeightRequest="25"
+                            FontFamily="Poppins-SemiBold"
+                            FontSize="20"
+                            HorizontalOptions="Center"
+                            Text="Una experiencia UNICA"
+                            TextColor="DarkRed"
+                            HorizontalTextAlignment="Start"
+                            Margin="0,0,0,15"/>
+                    <Frame Background="White" HeightRequest="190" WidthRequest="290" Margin="0,0,0,25"  >
+                        <Label 
+                      TextColor="#636363"
+                      FontSize="13.5"
+                      HorizontalTextAlignment="Center"
+                      Margin="0,5,0,0" FontFamily="Poppins-Medium" 
+                      Text="En NODO, la innovación, la tecnología, la creatividad, el arte y la cultura convergen en un ambiente flexible y práctico. Aquí, formamos  Profesionales integrales y  críticos que desafían e impulsan el status quo."
+                             />
+
+                    </Frame>
+
+
+                    <Label FontAttributes="Bold"
+                            WidthRequest="233"
+                            HeightRequest="40"
+                            FontFamily="PoppinsBold"
+                            FontSize="15"
+                            Text="Seleccione el Post que desea leer"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="DarkRed"
+                            HorizontalTextAlignment="Center"
+                            Margin="0,0,0,25" />
+
+                    <Picker x:Name="postPicker"
+                         TextColor="Black"
+                         FontFamily="Poppins-SemiBold"
+                         Title="Selecciona un post"
+                         WidthRequest="250"
+                         ItemsSource="{Binding Posts}"
+                         ItemDisplayBinding="{Binding Titulo}"
+                         SelectedIndexChanged="PostPicker_SelectedIndexChanged" />
+
+
+                    <Button BackgroundColor="#8D2232"
+                         WidthRequest="250"
+                         HeightRequest="50"
+                         FontFamily="PoppinsSemiBold"
+                         FontSize="Header"
+                         Text="Añadir Post"
+                         TextColor="White"
+                         Margin="0,20,0,80"
+                         Clicked="ClickPostNodo" />
+
+
+                </VerticalStackLayout>
+
+            </Grid>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

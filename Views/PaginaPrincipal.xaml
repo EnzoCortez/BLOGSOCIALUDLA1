@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BLOGSOCIALUDLA.Views.PaginaPrincipal"
+             Title="Página Principal" BackgroundColor="White">
+
+    <Grid>
+        <VerticalStackLayout 
+            HorizontalOptions="CenterAndExpand" 
+            VerticalOptions="Start" 
+            Spacing="0" 
+            Padding="0">
+
+            <Label
+                Text="Facultades"
+                HorizontalOptions="CenterAndExpand"
+                FontFamily="Poppins-SemiBold"
+                FontSize="18"
+                TextColor="DarkRed">
+            </Label>
+
+            <Label 
+                Text="FICA" 
+                FontSize="30" 
+                FontFamily="Poppins-Bold"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" 
+                VerticalOptions="Start" 
+                TextColor="DarkRed" />
+
+            <Frame 
+                Margin="0,0,0,30"
+                CornerRadius="20" 
+                Padding="0" 
+                BackgroundColor="White" 
+                BorderColor="DarkRed"
+                HasShadow="True"
+                WidthRequest="190"
+                HeightRequest="190"
+                HorizontalOptions="Center"
+                VerticalOptions="Start">
+                <ImageButton 
+                    Source="fica.jpg" 
+                    WidthRequest="185" 
+                    HeightRequest="185" 
+                    CornerRadius="20" 
+                    Aspect="AspectFill"
+                    x:Name="ficaButton" 
+                    BackgroundColor="Transparent"
+                    Clicked="ficaButton_Clicked" />
+            </Frame>
+
+            <Label 
+                Text="NODO" 
+                FontSize="30" 
+                FontFamily="Poppins-Bold"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" 
+                VerticalOptions="Center" 
+                TextColor="DarkRed" />
+
+            <Frame 
+                Margin="0,0,0,25"
+                CornerRadius="20" 
+                Padding="0" 
+                BackgroundColor="White" 
+                BorderColor="DarkRed"
+                HasShadow="True"
+                WidthRequest="190"
+                HeightRequest="190"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <ImageButton 
+                    Source="nodo2.jpg" 
+                    Aspect="AspectFill"
+                    WidthRequest="185" 
+                    HeightRequest="185" 
+                    CornerRadius="20" 
+                    x:Name="nodoButton" 
+                    BackgroundColor="Transparent"
+                    Clicked="nodoButton_Clicked" />
+            </Frame>
+
+            <!-- Botón para ir al perfil de usuario -->
+            <Button 
+                Text="Ir a mi perfil" 
+                FontSize="18"
+                FontFamily="Poppins-SemiBold"
+                TextColor="White"
+                BackgroundColor="DarkRed"
+                CornerRadius="20"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Clicked="IrPerfilButton_Clicked" />
+
+            <Image
+                Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"
+                WidthRequest="85"
+                HorizontalOptions="Start"
+                Margin="-80,0,0,0"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

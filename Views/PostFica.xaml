@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BLOGSOCIALUDLA.Views.PostFica"
+             Title="PostFica">
+    <ScrollView>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" BackgroundColor="White">
+                <VerticalStackLayout Margin="10,20,10,0" HorizontalOptions="Center">
+                    <Label FontAttributes="Bold"
+                        WidthRequest="233"
+                        HeightRequest="35"
+                        FontFamily="PoppinsBold"
+                        FontSize="30"
+                        Text="FICA"
+                        HorizontalOptions="StartAndExpand"
+                        TextColor="DarkRed"
+                        Margin="35,0,0,20"/>
+
+                    <Label TextColor="#636363"
+                   FontFamily="Poppins-Medium" 
+                   Margin="35,0,25,20" 
+                   FontSize="13.5"
+                   HorizontalTextAlignment="Start"
+                   Text="Formar personas competentes, emprendedoras y con visión global en el ámbito de las ciencias y la ingeniería, capaces de plantear soluciones innovadoras fundamentadas en la tecnología, con base en principios y valores éticos."/>
+
+                    <Label FontAttributes="Bold"
+                        WidthRequest="233"
+                        HeightRequest="25"
+                        FontFamily="Poppins-Bold"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        Text="VISIÓN"
+                        TextColor="DarkRed"
+                        HorizontalTextAlignment="Center"
+                        Margin="0,0,0,15"/>
+
+                    <Frame Background="White" HeightRequest="190" WidthRequest="300" Margin="0,0,0,25"  >
+                        <Label 
+                              TextColor="#636363"
+                              FontSize="13.5"
+                              HorizontalTextAlignment="Center"
+                              Margin="0,5,0,0" FontFamily="Poppins-Medium" 
+                              Text="Ser un referente a nivel nacional e internacional en el ámbito de la ingeniería y ciencias aplicadas por su aporte al desarrollo de la sociedad a través de la excelencia académica, la investigación, la innovación y tecnología de vanguardia."
+                          />
+
+                    </Frame>
+
+
+
+                    <Label FontAttributes="Bold"
+                       WidthRequest="233"
+                       HeightRequest="40"
+                       FontFamily="PoppinsBold"
+                       FontSize="15"
+                       Text="Seleccione el Post que desea leer"
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="DarkRed"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,25" />
+
+                    <Picker x:Name="postPicker"
+                            TextColor="Black"
+                            FontFamily="Poppins-SemiBold"
+                            Title="Selecciona un post"
+                            WidthRequest="250"
+                            ItemsSource="{Binding Posts}"
+                           
+                            ItemDisplayBinding="{Binding Titulo}"
+                            SelectedIndexChanged="PostPicker_SelectedIndexChanged" />
+
+
+                    <Button BackgroundColor="#8D2232"
+                            WidthRequest="250"
+                            HeightRequest="50"
+                            FontFamily="PoppinsSemiBold"
+                            FontSize="Header"
+                            Text="Añadir Post"
+                            TextColor="White"
+                            Margin="0,20,0,80"
+                            Clicked="ClickPostFica" />
+                </VerticalStackLayout>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

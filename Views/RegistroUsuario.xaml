@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BLOGSOCIALUDLA.Views.RegistroUsuario"
+             Title="RegistroUsuario">
+    <ScrollView>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Image Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Start"
+                    HeightRequest="70" Margin="0,10,-5,-2"
+                    Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png" />
+                <StackLayout Margin="90,80,90,0" HorizontalOptions="Center">
+                    <Label FontAttributes="Bold"
+                        WidthRequest="233"
+                        HeightRequest="70"
+                        FontFamily="PoppinsBold"
+                        FontSize="Title"
+                        Text="¡Bienvenid@ a SocialUdla!"
+                        TextColor="Black"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Margin="0,0,0,10" />
+                    <Label FontFamily="PoppinsMedium"
+                        FontSize="Header"
+                        Text="Para poder Iniciar Sesión debes Registrarte"
+                        TextColor="DarkSlateGrey"
+                        HeightRequest="24"
+                        WidthRequest="324"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Margin="0,0,0,30" />
+
+                    <Label FontFamily="PoppinsRegular"
+                 TextColor="DarkSlateGray"
+                 Text="Registra tu Nombre:"
+                 Margin="-50,0,0,5"
+                 />
+
+                    <Frame VerticalOptions="Start"
+                      WidthRequest="320"
+                      HeightRequest="54"
+                      BorderColor="Gray"
+                      BackgroundColor="White"
+                      Padding="2"
+                      Margin="25,0,25,10">
+
+                        <Entry x:Name="Nombre"
+                      FontFamily="PoppinsMedium"
+                      Placeholder="Jose "
+                      Keyboard="Email"
+                      Text="{Binding Usuario.Nombre}"
+                      FontSize="15"
+                      Margin="10,0,10,5" />
+                    </Frame>
+
+
+                    <Label FontFamily="PoppinsRegular"
+                   TextColor="DarkSlateGray"
+                   Text="Registra tu Apellido:"
+                   Margin="-50,0,0,5"
+                   />
+
+                    <Frame VerticalOptions="Start"
+                    WidthRequest="320"
+                    HeightRequest="54"
+                    BorderColor="Gray"
+                    BackgroundColor="White"
+                    Padding="2"
+                    Margin="25,0,25,10">
+
+                        <Entry x:Name="Apellido"
+                        FontFamily="PoppinsMedium"
+                        Placeholder="Jose "
+                        Keyboard="Email"
+                        Text="{Binding Usuario.Apellido}"
+                        FontSize="15"
+                        Margin="10,0,10,5" />
+                    </Frame>
+
+                    <Label FontFamily="PoppinsRegular"
+                        TextColor="DarkSlateGray"
+                        Text="Registra tu Correo:"
+                        Margin="-50,0,0,5"
+                        />
+                    <Frame VerticalOptions="Start"
+                        WidthRequest="320"
+                        HeightRequest="54"
+                        BorderColor="Gray"
+                        BackgroundColor="White"
+                        Padding="2"
+                        Margin="25,0,25,10">
+
+                        <Entry x:Name="Correo"
+                        FontFamily="PoppinsMedium"
+                        Placeholder="blogsocial@udla.edu.ec"
+                        Keyboard="Email"
+                        Text="{Binding Usuario.Username}"
+                        
+                        FontSize="15"
+                        Margin="10,0,10,5" />
+                    </Frame>
+                    <Label FontFamily="PoppinsRegular"
+                 TextColor="DarkSlateGray"
+                 Text="Registra tu Contraseña:"
+                 Margin="-50,0,0,5"
+                 />
+
+                    <Frame VerticalOptions="Start"
+                      WidthRequest="320"
+                      HeightRequest="54"
+                      BorderColor="Gray"
+                      BackgroundColor="White"
+                      Padding="2"
+                      Margin="25,0,25,30">
+
+                        <Entry x:Name="Contrasena"
+                      FontFamily="PoppinsMedium"
+                      Placeholder="blogsocial@udla.edu.ec"
+                      Keyboard="Email"
+                      Text="{Binding Usuario.Password}"
+                      FontSize="15"
+                      Margin="10,0,10,5" />
+                    </Frame>
+                    <Button BackgroundColor="#8D2232"
+                         WidthRequest="340"
+                         HeightRequest="50"
+                         FontFamily="PoppinsSemiBold"
+                         FontSize="15"
+                         Text="Registrarse"
+                         TextColor="White"
+                         Margin="0,0,0,20"
+                        Command="{Binding RegistrarseCommand}" />
+
+                    <StackLayout>
+                        <Grid BackgroundColor="Transparent"
+                       WidthRequest="350"
+                       HeightRequest="40"
+                       Margin="0,0,0,40">
+                            <Label Text="Iniciar Sesión"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    FontFamily="PoppinsMedium"
+                    FontSize="13"
+                    TextColor="DarkSlateGrey"
+                    TextDecorations="Underline" />
+                            <Button BackgroundColor="Transparent"
+                     FontFamily="PoppinsSemiBold"
+                     FontSize="15"
+                     Command="{Binding InicioSesionCommand}"
+                       />
+                        </Grid>
+                    </StackLayout>
+                    <Label FontFamily="PoppinsMedium"
+                        FontSize="Small"
+                        Text="¿Necesitas Ayuda?"
+                        TextColor="Grey"
+                        HorizontalOptions="CenterAndExpand"
+                        Margin="0,0,0,10" />
+                    <Label FontFamily="PoppinsBold"
+                        FontSize="Header"
+                        Text="Ayuda"
+                        TextColor="DarkSlateGrey"
+                        HorizontalOptions="CenterAndExpand"
+                        TextDecorations="Underline" />
+                    <Label x:Name="errorMessage"
+                        TextColor="Red"
+                        IsVisible="False"
+                        FontFamily="PoppinsRegular"
+                        FontSize="Small"
+                        Margin="25,0,25,0"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

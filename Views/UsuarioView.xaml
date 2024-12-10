@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BLOGSOCIALUDLA.Views.UsuarioView"
+             Title="Perfil de Usuario">
+
+    <CollectionView ItemsSource="{Binding Usuarios}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+
+                <StackLayout Orientation="Vertical" Padding="10" HorizontalOptions="Fill" Margin="25,40,0,25">
+
+                    <Label Text="Usuario"
+                     FontFamily="PoppinsBold"
+                     FontSize="25"
+                     HorizontalOptions="CenterAndExpand"
+                     TextColor="DarkRed"
+                     Margin="-28,0,0,15"
+                     ></Label>
+                    <Image
+                    WidthRequest="80"
+                    Source="usuario.png"
+                    Margin="-25,0,0,10"
+                    
+                    ></Image>
+                    <Label Text="Credenciales"
+                       FontFamily="PoppinsBold"
+                       FontSize="20"
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="DarkRed"
+                       Margin="-20,0,0,10"
+                       ></Label>
+
+
+
+                    <Frame Margin="0,0,20,25"
+                       CornerRadius="20"
+                       Padding="25"
+                       BackgroundColor="White"
+                       BorderColor="Grey"
+                       Opacity="50"
+                      
+                       >
+                        <StackLayout>
+
+                            <Label Text="Nombre:"
+                            TextColor="DarkRed"
+                            FontFamily="PoppinsSemiBold"
+                            FontSize="14"
+                         ></Label>
+                            <Label Text="{Binding Nombre}"
+                                FontFamily="PoppinsRegular"
+                                FontSize="14"/>
+                            <Label Text="Apellido:"
+                         TextColor="DarkRed"
+                          FontFamily="PoppinsSemiBold"
+                          FontSize="14"
+                        ></Label>
+                            <Label Text="{Binding Apellido}" 
+                            FontFamily="PoppinsRegular"
+                            FontSize="14" />
+                            <Label Text="Username:"
+                         TextColor="DarkRed"
+                         FontFamily="PoppinsSemiBold"
+                         FontSize="14"
+                        ></Label>
+                            <Label Text="{Binding Username}" 
+                         FontFamily="PoppinsRegular"
+                         FontSize="14" />
+                            <Label Text="Contraseña:"
+                         TextColor="DarkRed"
+                         FontFamily="PoppinsSemiBold"
+                         FontSize="14"></Label>
+                            <Label Text="{Binding Password}"
+                            FontFamily="PoppinsRegular"
+                            FontSize="14" />
+
+                        </StackLayout>
+
+
+
+
+                    </Frame>
+                    <Button
+                 Margin="5,0,25,20"
+                 Text="Editar Usuario"
+                 FontFamily="PoppinsSemiBold"
+                 BackgroundColor="DarkRed"
+                 >
+
+                    </Button>
+                    <Button
+                    Margin="5,0,25,0"
+                    Text="Cerrar Sesión"
+                    FontFamily="PoppinsSemiBold"
+                    BackgroundColor="DarkRed"
+                    Command="{Binding CerrarSesionCommand}"
+                    >
+
+                    </Button>
+                </StackLayout>
+            </DataTemplate>
+
+
+
+        </CollectionView.ItemTemplate>
+
+
+
+    </CollectionView>
+
+</ContentPage>
